@@ -101,25 +101,29 @@ class VescPacketValues : public VescPacket
 public:
   VescPacketValues(boost::shared_ptr<VescFrame> raw);
 
-  double v_in() const;
-  double temp_mos1() const;
-  double temp_mos2() const;
-  double temp_mos3() const;
-  double temp_mos4() const;
-  double temp_mos5() const;
-  double temp_mos6() const;
-  double temp_pcb() const;
-  double current_motor() const;
-  double current_in() const;
+  double temp_fet() const;
+  double temp_motor() const;
+  double avg_motor_current() const;
+  double avg_input_current() const;
+  double avg_id() const;
+  double avg_iq() const;
+  double duty_cycle_now() const;
   double rpm() const;
-  double duty_now() const;
+  double GET_INPUT_VOLTAGE() const;
   double amp_hours() const;
   double amp_hours_charged() const;
   double watt_hours() const;
   double watt_hours_charged() const;
-  double tachometer() const;
-  double tachometer_abs() const;
+  int32_t tachometer() const;
+  int32_t tachometer_abs() const;
   int fault_code() const;
+  double pid_pos_now() const;
+  int controller_id() const;
+  double NTC_TEMP_MOS1() const;
+  double NTC_TEMP_MOS2() const;
+  double NTC_TEMP_MOS3() const;
+  double avg_vd() const;
+  double avg_vq() const;
 
 };
 
@@ -189,6 +193,21 @@ public:
   //  double servo_pos() const;
 };
 
+class VescPacketSetHandbrake : public VescPacket
+{
+public:
+  VescPacketSetHandbrake(double handbrake);
+
+  //  double handbrake() const;
+};
+
+class VescPacketCommRotorPosition : public VescPacket
+{
+public:
+  VescPacketCommRotorPosition(boost::shared_ptr<VescFrame> raw);
+
+  int32_t comm_rotor_postion() const;
+};
 } // namespace vesc_driver
 
 #endif // VESC_DRIVER_VESC_PACKET_H_

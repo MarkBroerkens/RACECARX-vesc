@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/michael/src/racecar_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/michael/src/racecar_ws/src/racecar/ackermann_cmd_mux/include/**",
+                "/home/michael/src/racecar_ws/src/ddynamic_reconfigure/include/**",
+                "/home/michael/src/racecar_ws/src/serial/include/**",
+                "/home/michael/src/racecar_ws/src/vesc/vesc_ackermann/include/**",
+                "/home/michael/src/racecar_ws/src/vesc/vesc_driver/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/local/clang_9.0.0/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
