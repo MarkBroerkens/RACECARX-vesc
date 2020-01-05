@@ -434,7 +434,8 @@ VescPacketCommRotorPosition::VescPacketCommRotorPosition(boost::shared_ptr<VescF
 
 int32_t VescPacketCommRotorPosition::comm_rotor_postion() const
 {
-  return 0;  // TODO: return the true value
+  return 0;  // @todo: dummy to handle changed communication behavior of new fw. 
+             //        Return the true value in a future implementation
 }
 REGISTER_PACKET_TYPE(COMM_ROTOR_POSITION, VescPacketCommRotorPosition)
 
